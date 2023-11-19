@@ -11,7 +11,8 @@ const Button = ({
   children,
   isDisabled,
   name,
-  onPress = () => { },
+  onPress = () => {},
+  onPressChange = () => {},
   value,
 }: ButtonProps) => (
   <AriaButton
@@ -19,6 +20,7 @@ const Button = ({
     isDisabled={isDisabled}
     name={name}
     onPress={onPress}
+    onPressChange={onPressChange}
     value={value}
   >
     {children}
