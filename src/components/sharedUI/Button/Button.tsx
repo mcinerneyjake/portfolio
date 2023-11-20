@@ -4,6 +4,8 @@ interface ButtonProps extends AriaButtonProps {
   className?: string;
 }
 
+const disabledButtonStyle = 'bg-gray-400 cursor-not-allowed';
+
 const Button = ({
   className,
 
@@ -14,17 +16,34 @@ const Button = ({
   onPress = () => {},
   onPressChange = () => {},
   value,
-}: ButtonProps) => (
-  <AriaButton
-    className={className}
-    isDisabled={isDisabled}
-    name={name}
-    onPress={onPress}
-    onPressChange={onPressChange}
-    value={value}
-  >
-    {children}
-  </AriaButton>
-);
+}: ButtonProps) => {
+  // Helper Functions
+  const getButtonClassName = (cName: string | undefined) => {
+    let finalizedClassName;
+
+    if (cName) {
+      finalizedClassName = cName;
+
+      if (isDisabled) {
+        finalizedClassName = `${cName} ${disabledButtonStyle}`;
+      }
+    }
+
+    return finalizedClassName;
+  };
+
+  return (
+    <AriaButton
+      className={getButtonClassName(className)}
+      isDisabled={isDisabled}
+      name={name}
+      onPress={onPress}
+      onPressChange={onPressChange}
+      value={value}
+    >
+      {children}
+    </AriaButton>
+  );
+};
 
 export default Button;
