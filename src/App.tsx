@@ -2,7 +2,7 @@ import Header from './components/Header.tsx';
 import ProjectsWrapper from './components/ProjectsWrapper.tsx';
 
 import Counter from './components/projects/Counter.tsx';
-import TicTacToe from './components/projects/TicTacToe/TicTacToe.tsx';
+import TicTacToe from './components/projects/TicTacToe.tsx';
 
 import Label from './components/sharedUI/Label/Label.tsx';
 
