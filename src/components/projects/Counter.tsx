@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
 import Button from '../sharedUI/Button/Button.tsx';
-
-const buttonLayout = 'flex items-center justify-center h-10 w-36';
+import { buttonContainer, buttonStyle } from '../sharedConstants.ts';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -24,9 +23,9 @@ const Counter = () => {
         </div>
       </div>
       <div className='flex gap-4'>
-        <div className={`${buttonLayout} ${subtractButtonBackground}`}>
+        <div className={`${buttonContainer} ${subtractButtonBackground}`}>
           <Button
-            className='h-full w-full text-xl font-medium text-white'
+            className={`${buttonStyle}`}
             isDisabled={countIsZero}
             onPress={() => setCount(() => (countIsZero ? 0 : count - 1))}
             onPressChange={(isPressed) => { setSubtractButtonIsPressed(isPressed); }}
@@ -34,9 +33,9 @@ const Counter = () => {
             -
           </Button>
         </div>
-        <div className={`${buttonLayout} ${plusButtonBackground}`}>
+        <div className={`${buttonContainer} ${plusButtonBackground}`}>
           <Button
-            className='h-full w-full text-xl font-medium text-white'
+            className={`${buttonStyle}`}
             onPress={() => setCount(() => count + 1)}
             onPressChange={(isPressed) => { setPlusButtonIsPressed(isPressed); }}
           >
@@ -44,9 +43,9 @@ const Counter = () => {
           </Button>
         </div>
       </div>
-        <div className={`${buttonLayout} ${resetButtonBackground}`}>
+        <div className={`${buttonContainer} ${resetButtonBackground}`}>
           <Button
-            className='h-full w-full text-xl font-medium text-white'
+            className={`${buttonStyle}`}
             onPress={() => setCount(0)}
             onPressChange={(isPressed) => { setResetButtonIsPressed(isPressed); }}
           >

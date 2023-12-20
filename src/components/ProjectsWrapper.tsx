@@ -8,8 +8,8 @@ interface ProjectsWrapperProps {
 
 const ProjectsWrapper = ({ children }: ProjectsWrapperProps) => (
   <div className='p-10 bg-cyan-500'>
-    <Label className='text-3xl font-bold mb-12' content='Projects'/>
-    <div className='grid grid-cols-2 gap-60 items-center justify-center'>
+    <Label className='flex mb-14 items-center justify-center text-3xl font-bold' content='Projects'/>
+    <div className='grid grid-cols-2 h-auto w-auto gap-60 items-stretch justify-evenly'>
       {children}
     </div>
   </div>
