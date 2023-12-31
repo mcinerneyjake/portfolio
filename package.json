@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb": "^19.0.4",
     "react": "^18.2.0",
-    "react-aria": "^3.30.0",
-    "react-aria-components": "^1.0.0-rc.0",
-    "react-dom": "^18.2.0"
+    "react-aria": "^3.31.0",
+    "react-aria-components": "^1.0.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
