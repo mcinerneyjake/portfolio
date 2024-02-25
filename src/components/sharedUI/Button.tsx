@@ -18,14 +18,14 @@ const Button = ({
   value,
 }: ButtonProps) => {
   // Helper Functions
-  const getButtonClassName = (cName: string | undefined) => {
+  const getButtonClassName = () => {
     let finalizedClassName;
 
-    if (cName) {
-      finalizedClassName = cName;
+    if (className) {
+      finalizedClassName = className;
 
       if (isDisabled) {
-        finalizedClassName = `${cName} ${disabledButtonStyle}`;
+        finalizedClassName = `${className} ${disabledButtonStyle}`;
       }
     }
 
@@ -34,7 +34,7 @@ const Button = ({
 
   return (
     <AriaButton
-      className={getButtonClassName(className)}
+      className={getButtonClassName()}
       isDisabled={isDisabled}
       name={name}
       onPress={onPress}

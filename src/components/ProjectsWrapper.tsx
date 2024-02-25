@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Label from './sharedUI/Label/Label.tsx';
+import Label from './sharedUI/Label.tsx';
 
 interface ProjectsWrapperProps {
   children: React.ReactNode,

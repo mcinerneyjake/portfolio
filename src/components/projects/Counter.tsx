@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Button from '../sharedUI/Button/Button.tsx';
+import Button from '../sharedUI/Button.tsx';
 import { buttonContainer, buttonStyle } from '../sharedConstants.ts';
 
 const Counter = () => {

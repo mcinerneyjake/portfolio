@@ -1,4 +1,4 @@
-import Label from './sharedUI/Label/Label.tsx';
+import Label from './sharedUI/Label.tsx';
 
 const Header = () => (
   <div className='flex flex-col gap-4'>

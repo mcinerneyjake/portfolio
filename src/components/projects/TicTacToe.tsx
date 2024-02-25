@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { buttonContainer } from '../sharedConstants.ts';
-import Button from '../sharedUI/Button/Button.tsx';
+import Button from '../sharedUI/Button.tsx';
 
 const TicTacToe = () => {
   const [xIsNext, setXIsNext] = useState<boolean>(true);

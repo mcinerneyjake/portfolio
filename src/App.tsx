@@ -4,15 +4,17 @@ import ProjectsWrapper from './components/ProjectsWrapper.tsx';
 import Counter from './components/projects/Counter.tsx';
 import TicTacToe from './components/projects/TicTacToe.tsx';
 
-import Label from './components/sharedUI/Label/Label.tsx';
+import Label from './components/sharedUI/Label.tsx';
 
 import './App.css';
+import Nav from './components/Nav.tsx';
 
 const labelLayout = 'text-3xl font-bold h-10 w-60 mb-8';
 
 const App = () => (
   <div className='flex flex-col gap-10 items-center justify-center'>
     <Header />
+    <Nav />
     <ProjectsWrapper>
       <div className='flex flex-col items-center justify-center p-10 bg-cyan-300'>
         <Label className={labelLayout} content={'Counter'} />

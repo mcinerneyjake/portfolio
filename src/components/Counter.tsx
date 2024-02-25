@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import createCounterSlice from '../stores/Counter.store.ts';
-import Button from './sharedUI/Button/Button.tsx';
+import Button from './sharedUI/Button.tsx';
 import { buttonContainer, buttonStyle } from './sharedConstants.ts';
 
 const Counter = () => {
